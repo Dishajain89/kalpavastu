@@ -1,0 +1,206 @@
+@use "../../styles/abstracts/variables" as *;
+@use "../../styles/abstracts/mixins" as *;
+
+.contactSection {
+  // padding: 120px 0;
+  background: $black;
+  padding-top:120px;
+
+  @include mobile {
+    padding: 80px 0;
+  }
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.contactSection h2 {
+  text-align: center;
+  color: $heading-color;
+  margin-bottom: 70px;
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.contactInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+
+  margin-bottom: 80px;
+
+  @include tablet {
+    flex-direction: column;
+  }
+}
+
+.infoCard {
+  text-align: center;
+  width: 280px;
+
+  svg {
+    font-size: 28px;
+    color: $heading-color;
+    margin-bottom: 15px;
+  }
+
+  h4 {
+    color: $primary-text;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  p {
+    color: $secondary-text;
+  }
+}
+
+.divider {
+  width: 1px;
+  height: 120px;
+  background: rgba(207, 157, 123, 0.4);
+
+  @include tablet {
+    width: 120px;
+    height: 1px;
+  }
+}
+
+.headingBlock {
+  text-align: center;
+  margin-bottom: 50px;
+
+  h3 {
+    color: $primary-text;
+    line-height: 1.8;
+    letter-spacing: 1px;
+    font-size: 1rem;
+  }
+}
+
+.form {
+  max-width: 700px;
+  margin: auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+
+  input,
+  textarea {
+    width: 100%;
+
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(207,157,123,.15);
+
+    color: $primary-text;
+
+    padding: 18px 22px;
+
+    outline: none;
+
+    transition: all .3s ease;
+
+    &::placeholder {
+      color: rgba(193,191,182,.5);
+    }
+
+    &:focus {
+      border-color: $heading-color;
+      background: rgba(255,255,255,.08);
+    }
+  }
+
+  textarea {
+    resize: none;
+  }
+
+  button {
+    align-self: center;
+
+    padding: 16px 45px;
+
+    background: $heading-color;
+    color: $black;
+
+    border: none;
+    cursor: pointer;
+
+    font-weight: 600;
+    letter-spacing: 1px;
+
+    transition: all .4s ease;
+
+    &:hover {
+      transform: translateY(-4px);
+    }
+  }
+}
+
+.socialSection {
+  margin-top: 100px;
+  text-align: center;
+
+  h3 {
+    color: $heading-color;
+    font-size: 2rem;
+    margin-bottom: 35px;
+    font-family: $font-accent;
+    font-style: italic;
+  }
+}
+
+.socialIcons {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+
+  a {
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(207, 157, 123, 0.4);
+
+    background: rgba(255, 255, 255, 0.03);
+
+    color: $heading-color;
+
+    font-size: 1.4rem;
+
+    transition: all 0.4s ease;
+
+    &:hover {
+      background: $heading-color;
+      color: $black;
+
+      transform: translateY(-6px);
+      box-shadow: 0 10px 25px rgba(207, 157, 123, 0.25);
+    }
+  }
+}
+
+.mapWrapper {
+  position: relative;
+  margin: 3rem 1rem ;
+
+  iframe {
+    filter: grayscale(100%) contrast(1.1) brightness(0.7);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(36, 39, 36, 0.2);
+    pointer-events: none;
+  }
+}

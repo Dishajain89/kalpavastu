@@ -1,0 +1,24 @@
+@use "../abstracts/variables" as *;
+
+body {
+  font-family: $font-primary;
+  background: $black;
+  color: $primary-text;
+  overflow-x: hidden;
+  // overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+.logo-text {
+  font-family: $font-accent;
+  color: $heading-color;
+  font-weight: 600;
+}
+
+p {
+  line-height: 1.8;
+  color: $secondary-text;
+}

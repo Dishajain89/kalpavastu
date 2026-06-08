@@ -1,0 +1,32 @@
+@use "../../styles/abstracts/variables" as *;
+@use "../../styles/abstracts/mixins" as *;
+
+.hero {
+    height: calc(100vh - 80px);
+  margin-top: 80px;
+  background: $black;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  // padding: 120px 20px 40px;
+}
+
+.logoWrapper {
+  width: 100%;
+  max-width: 600px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+
+  user-select: none;
+  pointer-events: none;
+}

@@ -1,0 +1,48 @@
+@use "../../../styles/abstracts/variables" as *;
+@use "../../../styles/abstracts/mixins" as *;
+
+.copyright {
+  background: rgba(255, 255, 255, 0.03);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+  padding: 20px 0;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+ text-align:center;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   gap: 20px;
+
+  @include tablet {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  @include mobile {
+    padding: 0 20px;
+  }
+}
+
+.text,
+.designer {
+  color: white;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+
+.designer {
+  a{
+    color: $secondary-text;
+    text-decoration: none;
+    font-weight: 700;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

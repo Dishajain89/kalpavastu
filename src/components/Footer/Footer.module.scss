@@ -1,0 +1,111 @@
+@use "../../styles/abstracts/variables" as *;
+@use "../../styles/abstracts/mixins" as *;
+
+.footer {
+  background: #0b0d0b;
+  padding: 100px 0;
+
+  border-top: 1px solid rgba(255,255,255,.08);
+}
+
+.container {
+  max-width: 1400px;
+  margin: auto;
+  padding: 0 40px;
+
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 60px;
+
+  @include tablet {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include mobile {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+
+.brand {
+  img {
+    width: 10rem;
+    height: 10rem;
+    // border:1px solid red;
+    object-fit: contain;
+  }
+
+  h3 {
+    // margin-top: 15px;
+    color: $heading-color;
+    letter-spacing: 3px;
+  }
+
+  p {
+    margin-top: 15px;
+    max-width: 300px;
+  }
+}
+
+.links,
+.services,
+.social {
+  h4 {
+    color: $heading-color;
+    margin-bottom: 25px;
+  }
+}
+
+.links {
+  a {
+    display: block;
+    margin-bottom: 12px;
+
+    text-decoration: none;
+    color: $primary-text;
+
+    transition: .3s;
+
+    &:hover {
+      color: $heading-color;
+    }
+  }
+}
+
+.services {
+  span {
+    display: block;
+    margin-bottom: 12px;
+    color: $primary-text;
+  }
+}
+
+.icons {
+  display: flex;
+  gap: 15px;
+
+  @include mobile {
+    justify-content: center;
+  }
+
+  a {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(207,157,123,.3);
+
+    color: $heading-color;
+
+    transition: .4s;
+
+    &:hover {
+      background: $heading-color;
+      color: $black;
+      transform: translateY(-4px);
+    }
+  }
+}

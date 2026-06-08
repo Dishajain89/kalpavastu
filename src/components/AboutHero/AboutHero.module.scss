@@ -1,0 +1,229 @@
+@use "../../styles/abstracts/variables" as *;
+@use "../../styles/abstracts/mixins" as *;
+
+.aboutHero {
+  min-height: 100vh;
+  padding: 140px 0 100px;
+  background: $black;
+
+  @include tablet {
+    padding: 100px 0 80px;
+  }
+
+  @include mobile {
+    padding: 80px 0 60px;
+  }
+}
+
+.container {
+  max-width: 1400px;
+  margin: auto;
+  padding:40px;
+
+  display: grid;
+  grid-template-columns: 2fr 400px;
+  gap: 50px;
+
+  @include laptop {
+    padding: 0 30px;
+    gap: 40px;
+  }
+
+  @include tablet {
+    grid-template-columns: 1fr;
+    padding: 0 24px;
+    gap: 30px;
+  }
+
+  @include mobile {
+    padding: 16px;
+    gap: 20px;
+  }
+}
+
+// .sectionTag {
+//   display: block;
+//   margin-bottom: 50px;
+
+//   font-size: clamp(1.25rem, 5vw, 2rem);
+//   letter-spacing: 4px;
+//   color: $primary-text;
+
+//   @include mobile {
+//     margin-bottom: 30px;
+//   }
+// }
+
+.philosophyCard {
+  background: $about-bg;
+  border-radius: clamp(20px, 5vw, 40px);
+
+  padding: clamp(24px, 6vw, 40px);
+text-align:center;
+  min-height: 500px;
+
+  @include tablet {
+    min-height: auto;
+  }
+
+  @include mobile {
+    min-height: auto;
+  }
+
+  h1 {
+    font-size: clamp(1.75rem, 6vw, 3rem);
+    margin-bottom: clamp(24px, 4vw, 40px);
+    color: $tertiary-text;
+    font-family: $font-primary;
+    line-height: 1.2;
+    font-weight: 400;
+  }
+
+  p {
+    color: $tertiary-text;
+    font-size: clamp(14px, 2.5vw, 18px);
+    line-height: 1.8;
+    font-weight: 700;
+
+    @include mobile {
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: clamp(16px, 3vw, 20px);
+    }
+  }
+}
+
+.founderCard {
+  display: flex;
+  flex-direction: column;
+
+  @include tablet {
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+  }
+
+  @include mobile {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: clamp(300px, 60vw, 650px);
+  overflow: hidden;
+  border-radius: clamp(16px, 3vw, 20px);
+
+  img {
+    object-fit: cover;
+  }
+
+  @include tablet {
+    height: clamp(250px, 50vw, 500px);
+    flex: 0 0 auto;
+    width: clamp(200px, 40vw, 400px);
+    
+  }
+
+  @include mobile {
+    height: 500px;
+    width: 100%;
+  }
+}
+
+.founderInfo {
+  text-align: center;
+  padding: clamp(16px, 3vw, 25px) 0;
+
+  h3 {
+    color: $primary-text;
+    font-size: clamp(16px, 2vw, 20px);
+    letter-spacing: 1px;
+  }
+
+  p {
+    margin-top: clamp(8px, 1.5vw, 10px);
+    color: $primary-text;
+    font-size: clamp(12px, 1.8vw, 14px);
+  }
+
+  @include mobile {
+    padding: 16px 0;
+    // align-items: center;
+  }
+
+  .nameDivider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(8px, 2vw, 12px);
+
+    margin-top: clamp(16px, 3vw, 20px);
+
+    span {
+      color: $primary-text;
+      font-size: clamp(14px, 2vw, 16px);
+      letter-spacing: 1px;
+      white-space: nowrap;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      flex: 1;
+      height: 2px;
+      background: $primary-text;
+      opacity: 0.7;
+
+      @include mobile {
+        display: none;
+      }
+    }
+  }
+}
+
+.signatureBox {
+  background: $about-bg;
+
+  // min-height: 100px;
+
+  img{
+    object-fit: contain;
+    height: 150px;
+    width: 100%;
+  }
+  
+
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+
+  // color: $black;
+
+  @include tablet {
+    min-height: 80px;
+  }
+
+  @include mobile {
+    min-height: 70px;
+    font-size: clamp(12px, 2vw, 14px);
+    width: 100%;
+  }
+}
+
+.signatureBox {
+  background: $about-bg;
+
+  min-height: 100px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: $black;
+}
