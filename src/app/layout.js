@@ -19,6 +19,8 @@ const cormorant = Cormorant_Garamond({
   variable: "--font-accent",
 });
 
+
+
 export default function RootLayout({ children }) {
    const pathname = usePathname();
 
