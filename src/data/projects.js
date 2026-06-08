@@ -1,7 +1,7 @@
 const projects = [
   {
     id: "kalp-villa",
-    title: "Avinash Rajawat",
+    title: "Avnish Rajawat",
     image: "/images/projects/avinash-rajawat.png",
   },
   {
@@ -21,7 +21,7 @@ const projects = [
   },
   {
     id: "vastu-home",
-    title: "Spaarc",
+    title: "Spaarch Co-operate",
     image: "/images/projects/spaarc.png",
   },
  

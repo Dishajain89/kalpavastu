@@ -30,7 +30,7 @@ const ContactFooter = () => {
         </p> */}
 
         <div className={styles.socialLinks}>
-          <Link href="#">
+          <Link href="https://www.instagram.com/kalpavaastu.indore/" target="_blank" rel="noopener noreferrer">
             Instagram
           </Link>
 

@@ -59,6 +59,16 @@ const Navbar = () => {
           >
             Home
           </Link>
+           <Link
+            href="/about"
+            className={
+              pathname === "/about"
+                ? styles.active
+                : ""
+            }
+          >
+            About Us
+          </Link>
 
           <Link
             href="/services"
@@ -70,17 +80,7 @@ const Navbar = () => {
           >
             Services
           </Link>
-
-          <Link
-            href="/about"
-            className={
-              pathname === "/about"
-                ? styles.active
-                : ""
-            }
-          >
-            About Us
-          </Link>
+ 
 
           <Link
             href="/portfolio"
@@ -143,6 +143,12 @@ const Navbar = () => {
         >
           Home
         </Link>
+         <Link
+          href="/about"
+          onClick={() => setMenuOpen(false)}
+        >
+          About Us
+        </Link>
 
         <Link
           href="/services"
@@ -151,12 +157,7 @@ const Navbar = () => {
           Services
         </Link>
 
-        <Link
-          href="/about"
-          onClick={() => setMenuOpen(false)}
-        >
-          About Us
-        </Link>
+       
 
         <Link
           href="/portfolio"

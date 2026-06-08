@@ -35,7 +35,7 @@ const ContactForm = () => {
 ${message}
 `;
 
-    const phoneNumber = "917000780945"; // Replace with client's WhatsApp Number
+    const phoneNumber = "919111208209"; // Replace with client's WhatsApp Number
 
     window.open(
       `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
@@ -64,7 +64,7 @@ ${message}
           <div className={styles.infoCard}>
             <FaPhoneAlt />
             <h4>Phone</h4>
-            <p>+91 9876543210</p>
+            <p>+91 9111208209</p>
           </div>
 
           <div className={styles.divider}></div>
@@ -72,7 +72,7 @@ ${message}
           <div className={styles.infoCard}>
             <FaMapMarkerAlt />
             <h4>Address</h4>
-            <p>Jaipur, Rajasthan, India</p>
+            <p>Mz 02 Onam plaza , indore.</p>
           </div>
 
           <div className={styles.divider}></div>
@@ -144,7 +144,7 @@ ${message}
     </a>
 
     <a
-      href="https://instagram.com"
+      href="https://www.instagram.com/kalpavaastu.indore/"
       target="_blank"
       rel="noopener noreferrer"
     >

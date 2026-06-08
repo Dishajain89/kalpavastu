@@ -28,7 +28,7 @@ const Footer = () => {
 
           <p>
             Architecture • Structure Design •
-            Interiors • Vaastu
+            Interiors 
           </p>
         </div>
 
@@ -61,7 +61,7 @@ const Footer = () => {
           <h4>Follow Us</h4>
 
           <div className={styles.icons}>
-            <a href="#">
+            <a href="https://www.instagram.com/kalpavaastu.indore/" target="_blank" rel="noopener noreferrer">
               <FaInstagram />
             </a>
 
