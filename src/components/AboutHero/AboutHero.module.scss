@@ -33,11 +33,15 @@
     grid-template-columns: 1fr;
     padding: 0 24px;
     gap: 30px;
+    display: flex;
+    flex-direction: column-reverse;
   }
 
   @include mobile {
     padding: 16px;
     gap: 20px;
+    display: flex;
+    flex-direction: column-reverse;
   }
 }
 
