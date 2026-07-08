@@ -65,15 +65,15 @@ const Footer = () => {
               <FaInstagram />
             </a>
 
-            <a href="#">
+            <a href="https://www.facebook.com/profile.php?id=100063664551621 " target="_blank" rel="noopener noreferrer">
               <FaFacebookF />
             </a>
 
-            <a href="#">
+            <a href="https://www.linkedin.com/in/ankur-kalpavaastu" target="_blank" rel="noopener noreferrer  ">
               <FaLinkedinIn />
             </a>
 
-            <a href="#">
+            <a href="https://www.youtube.com/@KalpaVaastu" target="_blank" rel="noopener noreferrer">
               <FaYoutube />
             </a>
           </div>

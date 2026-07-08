@@ -136,7 +136,7 @@ ${message}
 
           <div className={styles.socialIcons}>
             <a
-              href="https://facebook.com"
+              href="https://www.facebook.com/profile.php?id=100063664551621"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -152,7 +152,7 @@ ${message}
             </a>
 
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/ankur-kalpavaastu"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -160,7 +160,7 @@ ${message}
             </a>
 
             <a
-              href="https://youtube.com"
+              href="https://www.youtube.com/@KalpaVaastu"
               target="_blank"
               rel="noopener noreferrer"
             >

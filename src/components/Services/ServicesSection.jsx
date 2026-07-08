@@ -47,15 +47,15 @@ From concept development to execution oversight, our process remains collaborati
     `,
     image: "/images/service/serviceHero1.png",
   },
-  {
-    title: " TURN KEY PROJECTS",
-    description: `
-At Kalpavaastu Design Studio, our turnkey service is designed to deliver a seamless transition from concept to completion with complete accountability under one roof. By integrating architecture, interiors, and in-house structural design into a unified process, we ensure every project is executed with precision, coordination, and long-term reliability.
+//   {
+//     title: " TURN KEY PROJECTS",
+//     description: `
+// At Kalpavaastu Design Studio, our turnkey service is designed to deliver a seamless transition from concept to completion with complete accountability under one roof. By integrating architecture, interiors, and in-house structural design into a unified process, we ensure every project is executed with precision, coordination, and long-term reliability.
 
-Our approach goes beyond construction management. Every decision — from planning and structural systems to material selection and execution detailing — is aligned with the larger vision of creating timeless, high-performance spaces built for generations. The integration of in-house structural engineering allows us to maintain technical accuracy, reduce execution conflicts, optimize construction efficiency, and preserve the integrity of the original design intent throughout the project lifecycle.
-    `,
-    image: "/images/service/service4.png",
-  },
+// Our approach goes beyond construction management. Every decision — from planning and structural systems to material selection and execution detailing — is aligned with the larger vision of creating timeless, high-performance spaces built for generations. The integration of in-house structural engineering allows us to maintain technical accuracy, reduce execution conflicts, optimize construction efficiency, and preserve the integrity of the original design intent throughout the project lifecycle.
+//     `,
+//     image: "/images/service/service4.png",
+//   },
 ];
 
 export default function ServicesSection() {

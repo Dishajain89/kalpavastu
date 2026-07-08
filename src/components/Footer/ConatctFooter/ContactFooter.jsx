@@ -34,15 +34,15 @@ const ContactFooter = () => {
             Instagram
           </Link>
 
-          <Link href="#">
+          <Link href="https://www.facebook.com/profile.php?id=100063664551621" target="_blank" rel="noopener noreferrer">
             Facebook
           </Link>
 
-          <Link href="#">
+          <Link href="https://www.linkedin.com/in/ankur-kalpavaastu" target="_blank" rel="noopener noreferrer">
             LinkedIn
           </Link>
 
-          <Link href="#">
+          <Link href="https://www.youtube.com/@KalpaVaastu" target="_blank" rel="noopener noreferrer">
             YouTube
           </Link>
         </div>
