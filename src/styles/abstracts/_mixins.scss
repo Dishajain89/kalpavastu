@@ -15,3 +15,21 @@
     @content;
   }
 }
+
+@mixin desktop {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin wide {
+  @media (min-width: 1600px) {
+    @content;
+  }
+}
+
+@mixin tv {
+  @media (min-width: 1920px) {
+    @content;
+  }
+}

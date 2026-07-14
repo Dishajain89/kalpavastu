@@ -20,8 +20,8 @@ const Footer = () => {
           <Image
             src="/images/logo1.png"
             alt="Kalpavaastu"
-            width={120}
-            height={120}
+            width={150}
+            height={150}
           />
 
           <h3>KALPAVAASTU</h3>

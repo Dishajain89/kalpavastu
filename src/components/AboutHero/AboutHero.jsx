@@ -9,8 +9,6 @@ const AboutHero = () => {
             <div className={styles.container}>
 
                 <div className={styles.leftContent}>
-                  
-
                     <div className={styles.philosophyCard}>
                         <h1>OUR PHILOSOPHY</h1>
 

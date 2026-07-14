@@ -18,7 +18,7 @@
 .container {
   max-width: 1400px;
   margin: auto;
-  padding:40px;
+  padding: 40px;
 
   display: grid;
   grid-template-columns: 2fr 400px;
@@ -63,8 +63,11 @@
   border-radius: clamp(20px, 5vw, 40px);
 
   padding: clamp(24px, 6vw, 40px);
-text-align:center;
-  min-height: 500px;
+  text-align: center;
+  min-height: 920px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   @include tablet {
     min-height: auto;
@@ -131,7 +134,7 @@ text-align:center;
     height: clamp(250px, 50vw, 500px);
     flex: 0 0 auto;
     width: clamp(200px, 40vw, 400px);
-    
+
   }
 
   @include mobile {
@@ -196,12 +199,12 @@ text-align:center;
 
   // min-height: 100px;
 
-  img{
+  img {
     object-fit: contain;
     height: 150px;
     width: 100%;
   }
-  
+
 
   // display: flex;
   // align-items: center;
