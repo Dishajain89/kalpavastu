@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { Manrope, Cormorant_Garamond } from "next/font/google";
 
 import { usePathname } from "next/navigation";
@@ -7,6 +7,7 @@ import "@/styles/_globals.scss";
 import Navbar from "@/components/Navbar/Navbar";
 import Copyright from "@/components/Footer/Copyright/Copyright";
 import Footer from "@/components/Footer/Footer";
+import ScrollToTop from "@/components/ScrollToTop/ScrollToTop";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -19,27 +20,24 @@ const cormorant = Cormorant_Garamond({
   variable: "--font-accent",
 });
 
-
-
 export default function RootLayout({ children }) {
-   const pathname = usePathname();
+  const pathname = usePathname();
 
   const hideFooterRoutes = ["/", "/contact"];
 
   const showFooter = !hideFooterRoutes.includes(pathname);
   return (
     <html lang="en">
-      <body
-        className={`${manrope.variable} ${cormorant.variable}`}
-      >
-        <Navbar /> 
+      <body className={`${manrope.variable} ${cormorant.variable}`}>
+        <Navbar />
         {children}
+        <ScrollToTop/>
         {showFooter && (
-        <>
-          <Footer />
-        <Copyright/>
-        </>
-      )}
+          <>
+            <Footer />
+            <Copyright />
+          </>
+        )}
       </body>
     </html>
   );

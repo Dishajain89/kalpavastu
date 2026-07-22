@@ -18,7 +18,7 @@ const Footer = () => {
 
         <div className={styles.brand}>
           <Image
-            src="/images/logo1.png"
+            src="/images/logoFinal.png"
             alt="Kalpavaastu"
             width={150}
             height={150}

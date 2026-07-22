@@ -18,7 +18,7 @@ const ContactFooter = () => {
 
       <div className={styles.content}>
         <Image
-          src="/images/logo1.png"
+          src="/images/logoFinal.png"
           alt="Kalpavaastu"
           width={180}
           height={180}

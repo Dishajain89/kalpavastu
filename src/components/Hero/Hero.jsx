@@ -8,7 +8,7 @@ const Hero = () => {
     <section className={styles.hero}>
       <div className={styles.logoWrapper}>
         <Image
-          src="/images/logo1.png"
+          src="/images/logoFinal.png"
           alt="Kalpavaastu"
           width={700}
           height={450}
