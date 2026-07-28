@@ -12,7 +12,7 @@
   }
 
   @include mobile {
-    height: 100svh;
+    height: 80vh;
   }
 }
 
@@ -21,6 +21,11 @@
   object-position: top center;
   user-select: none;
   pointer-events: none;
+
+  @include mobile {
+    object-fit: contain; 
+    object-position: top center;
+}
 }
 
 
@@ -47,19 +52,10 @@
 /* Tablet */
 @include tablet {
   .heroImage {
-    object-position:top center;
+    object-fit: contain;
+    object-position:center;
   }
 }
 
 
 /* Mobile */
-@include mobile {
-  .hero {
-    height: 100svh;
-  }
-
-  .heroImage {
-    object-fit: contain; 
-    object-position: top center;
-  }
-}

@@ -45,7 +45,7 @@ const teamMembers = [
     name: "ER. PUNIT SHARMA",
     role: "Principal Structural Designer",
     qualification: "(M.E (Hons.) Structure Designing)",
-    image: "/images/team/Punit.png",
+    image: "/images/team/punit1.png",
     featured: false,
   },
 
