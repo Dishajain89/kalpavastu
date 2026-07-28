@@ -8,7 +8,7 @@ const ServiceHero = () => {
     <section className={styles.serviceHero}>
       <div className={styles.logoWrapper}>
         <Image
-          src="/images/service/Service_Hero.png"
+          src="/images/service/service_Hero.png"
           alt="Kalpavaastu"
           width={700}
           height={450}
