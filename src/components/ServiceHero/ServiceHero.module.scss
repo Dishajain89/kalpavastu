@@ -4,13 +4,27 @@
 .serviceHero {
   min-height: 100vh;
   background: $black;
-  // background-color: beige;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
   padding: 120px 20px 40px;
+
+  @include laptop {
+    padding: 100px 20px 36px;
+  }
+
+  @include tablet {
+    padding: 80px 16px 30px;
+    min-height: 75vh;
+  }
+
+  @include mobile {
+    padding: 60px 12px 24px;
+    min-height: 60vh;
+    align-items: flex-start;
+  }
 }
 
 .logoWrapper {
@@ -20,6 +34,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0 8px;
+
+  @include laptop {
+    max-width: 720px;
+  }
+
+  @include tablet {
+    max-width: 560px;
+  }
+
+  @include mobile {
+    max-width: 360px;
+  }
 }
 
 .logo {
@@ -29,4 +56,17 @@
 
   user-select: none;
   pointer-events: none;
+  max-width: 760px;
+
+  @include laptop {
+    max-width: 620px;
+  }
+
+  @include tablet {
+    max-width: 480px;
+  }
+
+  @include mobile {
+    max-width: 320px;
+  }
 }
