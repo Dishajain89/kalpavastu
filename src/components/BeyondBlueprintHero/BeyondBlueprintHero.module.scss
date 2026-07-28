@@ -1,0 +1,65 @@
+@use "../../styles/abstracts/variables" as *;
+@use "../../styles/abstracts/mixins" as *;
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+
+  @include tablet {
+    height: 90vh;
+  }
+
+  @include mobile {
+    height: 100svh;
+  }
+}
+
+.heroImage {
+  object-fit: cover;
+  object-position: top center;
+  user-select: none;
+  pointer-events: none;
+}
+
+
+/* Desktop Image */
+.desktopImage {
+  display: block;
+
+  @include mobile {
+    display: none;
+  }
+}
+
+
+/* Mobile Image */
+.mobileImage {
+  display: none;
+
+  @include mobile {
+    display: block;
+  }
+}
+
+
+/* Tablet */
+@include tablet {
+  .heroImage {
+    object-position:top center;
+  }
+}
+
+
+/* Mobile */
+@include mobile {
+  .hero {
+    height: 100svh;
+  }
+
+  .heroImage {
+    object-fit: contain; 
+    object-position: top center;
+  }
+}

@@ -1,10 +1,10 @@
-import ComingSoon from "@/components/ComingSoon/ComingSoon";
+import BeyondBlueprintHero from "@/components/BeyondBlueprintHero/BeyondBlueprintHero";
 
 
 export default function beyondBlueprint() {
   return (
     <div >
-        <ComingSoon/>
+        <BeyondBlueprintHero/>
     </div>
   );
 }
