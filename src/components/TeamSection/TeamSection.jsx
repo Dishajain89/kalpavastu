@@ -12,7 +12,7 @@ const teamMembers = [
     role: "Founder And Lead Architect",
     qualification:
       "(B.E Civil Engineering)\n(3rd Generation Vaastu Sthapati)\nM.A in Vaastu Shastra",
-    image: "/images/founder1.png",
+    image: "/images/founder.png",
     featured: true,
   },
 

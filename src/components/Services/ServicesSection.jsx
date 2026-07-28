@@ -45,7 +45,7 @@ We believe true luxury lies not in excess, but in clarity, restraint, and purpos
 
 From concept development to execution oversight, our process remains collaborative, meticulous, and detail-driven, ensuring every space reflects its owner with uncompromising refinement.
     `,
-    image: "/images/service/serviceHero1.png",
+    image: "/images/service/service3.jpg",
   },
 //   {
 //     title: " TURN KEY PROJECTS",

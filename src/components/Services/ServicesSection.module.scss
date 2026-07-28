@@ -85,11 +85,15 @@
 
 .imageWrapper {
   position: relative;
-  height: 600px;
+  // height: 600px;
   overflow: hidden;
+   width: 100%;
+  aspect-ratio: 4 / 5;
 
   img {
-    object-fit: cover;
+    // object-fit: cover;
+    object-fit: contain;
+    object-position: center;
     transition: transform 0.8s ease;
   }
 

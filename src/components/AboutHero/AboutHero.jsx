@@ -29,7 +29,7 @@ const AboutHero = () => {
                 <div className={styles.founderCard}>
                     <div className={styles.imageWrapper}>
                         <Image
-                            src="/images/founder1.png"
+                            src="/images/founder.png"
                             alt="Founder"
                             fill
                             priority

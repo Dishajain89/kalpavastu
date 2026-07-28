@@ -80,7 +80,7 @@ ${message}
           <div className={styles.infoCard}>
             <MdEmail />
             <h4>Email</h4>
-            <p>kalpavaastu@gmail.com</p>
+            <p>contactus@kalpavaastu.com</p>
           </div>
         </div>
 

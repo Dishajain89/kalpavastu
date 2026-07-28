@@ -3,110 +3,168 @@
 
 .statsSection {
   background: $navbar-bg;
-  padding: 100px 0;
-  overflow: hidden;
-  height: 250px;
-  // border:1px solid red;
+  padding: 2.5rem 1.25rem;
+
+  @include tablet {
+    padding: 2rem 1rem;
+  }
+
+  @include mobile {
+    padding: 1.5rem 1rem;
+  }
 }
 
 .container {
-  max-width: 1500px;
-  margin: auto;
+  max-width: 1400px;
+  margin: 0 auto;
 
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 
+  gap: 1rem;
+
   @include tablet {
     grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
   }
 
   @include mobile {
     grid-template-columns: 1fr;
+    gap: .75rem;
   }
 }
 
 .statCard {
-  position: relative;
-  top: -37%;
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 16px;
 
-  padding: 50px 35px;
+  padding: 1rem 1.2rem;
 
   border-right: 1px solid rgba(255,255,255,.12);
-// border:2px solid rgb(132, 0, 255);
-  @include mobile {
+
+  transition: .35s ease;
+
+  &:last-child {
     border-right: none;
-    border-bottom: 1px solid rgba(255,255,255,.08);
   }
 
   &:hover {
+    transform: translateY(-4px);
+
     .icon {
-      transform: translateY(-5px);
+      color: $heading-color;
+      transform: scale(1.08);
     }
 
     .pillars span {
       background: $heading-color;
     }
   }
+
+  @include tablet {
+    border-right: none;
+    border-bottom: 1px solid rgba(255,255,255,.08);
+  }
+
+  @include mobile {
+    padding: .9rem 0;
+    gap: 14px;
+  }
 }
 
 .icon {
-  font-size: 3rem;
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 1.7rem;
   color: $primary-text;
 
-  transition: .4s ease;
+  transition: .35s ease;
+
+  flex-shrink: 0;
+
+  @include mobile {
+    width: 46px;
+    height: 46px;
+    font-size: 1.5rem;
+  }
 }
 
 .content {
   flex: 1;
 
   h3 {
-    font-size: 3rem;
-    font-weight: 700;
-    line-height: 1;
-
     color: white;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1;
+    margin-bottom: 6px;
 
-    margin-bottom: 12px;
+    @include tablet {
+      font-size: 1.75rem;
+    }
 
     @include mobile {
-      font-size: 3rem;
+      font-size: 1.55rem;
     }
   }
 
   p {
     color: $primary-text;
     text-transform: uppercase;
-
     letter-spacing: 1px;
-    font-weight: 500;
-    font-size: 0.9rem;
+    font-size: .82rem;
+    line-height: 1.4;
+
+    @include mobile {
+      font-size: .75rem;
+    }
   }
 }
 
 .pillars {
   display: flex;
   align-items: flex-end;
-  gap: 10px;
+  gap: 5px;
+
+  flex-shrink: 0;
 
   span {
-    width: 8px;
-    background: rgba(193,191,182,.6);
-
-    transition: .4s ease;
+    width: 5px;
+    background: rgba(255,255,255,.35);
+    transition: .35s;
 
     &:nth-child(1) {
-      height: 90px;
+      height: 45px;
     }
 
     &:nth-child(2) {
-      height: 65px;
+      height: 32px;
     }
 
     &:nth-child(3) {
-      height: 40px;
+      height: 20px;
+    }
+  }
+
+  @include mobile {
+    span {
+      &:nth-child(1) {
+        height: 38px;
+      }
+
+      &:nth-child(2) {
+        height: 28px;
+      }
+
+      &:nth-child(3) {
+        height: 18px;
+      }
     }
   }
 }
