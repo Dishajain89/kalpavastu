@@ -24,9 +24,9 @@
 }
 
 .container {
-  max-width: 1440px;
-
-  margin: auto;
+  max-width: $container-width;
+  width: 92%;
+  margin: 0 auto;
 
   padding: 0 24px;
 

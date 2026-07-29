@@ -16,7 +16,7 @@
 }
 
 .container {
-  max-width: 1400px;
+  max-width: $container-width;
   margin: auto;
   padding: 40px;
 
@@ -64,7 +64,7 @@
 
   padding: clamp(24px, 6vw, 40px);
   text-align: center;
-  min-height: 920px;
+  min-height: 930px;
   display: flex;
   flex-direction: column;
   justify-content: center;
