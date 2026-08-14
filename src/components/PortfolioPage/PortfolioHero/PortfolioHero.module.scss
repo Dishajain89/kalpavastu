@@ -1,0 +1,100 @@
+@use "../../../styles/abstracts/variables" as *;
+@use "../../../styles/abstracts/mixins" as *;
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: clamp(420px, 70vh, 700px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  background: $black;
+
+  @include tablet {
+    height: 500px;
+  }
+
+  @include mobile {
+    height: 420px;
+  }
+}
+
+.background {
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+}
+
+/* Dark overlay so text remains readable */
+.overlay {
+  position: absolute;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.58);
+
+  z-index: 1;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  padding: 0 30px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+}
+
+.content h1 {
+  margin: 0;
+
+//   color: $heading-color;
+color: white;
+
+  font-family: $font-accent;
+
+  font-size: clamp(3rem, 7vw, 7rem);
+
+  font-weight: 400;
+
+  line-height: 1;
+
+  letter-spacing: 1px;
+
+  text-transform: none;
+
+  text-shadow: 0 3px 20px rgba(0, 0, 0, 0.4);
+
+  @include tablet {
+    font-size: clamp(3rem, 9vw, 5rem);
+  }
+
+  @include mobile {
+    font-size: clamp(2.5rem, 11vw, 4rem);
+
+    line-height: 1.1;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 390px) {
+  .hero {
+    height: 380px;
+  }
+
+  .content {
+    padding: 0 20px;
+  }
+
+  .content h1 {
+    font-size: 2.4rem;
+  }
+}

@@ -14,8 +14,7 @@ const PortfolioSection = () => {
     <section className={styles.portfolio}>
       <div className={styles.container}>
         <div className={styles.heading}>
-          <span>Our Work</span>
-
+          
           <h2>Featured Projects</h2>
 
           <p>

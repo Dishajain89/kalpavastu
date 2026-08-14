@@ -1,5 +1,5 @@
-@use "../../styles/abstracts/variables" as *;
-@use "../../styles/abstracts/mixins" as *;
+@use "../../../styles/abstracts/variables" as *;
+@use "../../../styles/abstracts/mixins" as *;
 
 .portfolio {
   padding: 120px 0;
@@ -9,7 +9,7 @@
 .container {
   max-width: $container-width;
   margin: auto;
-  padding: 0 40px;
+  padding: 0 20px;
 }
 
 .heading {
