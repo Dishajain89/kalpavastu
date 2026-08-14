@@ -2,7 +2,7 @@
 @use "../../styles/abstracts/mixins" as *;
 
 .serviceHero {
-  min-height: 100vh;
+  min-height: 75vh;
   background: $black;
 
   display: flex;
@@ -17,7 +17,7 @@
 
   @include tablet {
     padding: 80px 16px 30px;
-    min-height: 75vh;
+    min-height: 70vh;
   }
 
   @include mobile {
@@ -27,46 +27,48 @@
   }
 }
 
-.logoWrapper {
+.serviceWrapper {
   width: 100%;
-  max-width: 950px;
-
+  max-width: 1200px;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0 8px;
 
   @include laptop {
-    max-width: 720px;
+    max-width: 900px;
   }
 
   @include tablet {
-    max-width: 560px;
+    max-width: 640px;
   }
 
   @include mobile {
-    max-width: 360px;
+    max-width: 100%;
   }
 }
 
-.logo {
-  width: 100%;
+.serviceImage {
+  display: block;
+  width: clamp(280px, 78vw, 980px);
   height: auto;
+  max-width: 980px;
   object-fit: contain;
-
   user-select: none;
   pointer-events: none;
-  max-width: 860px;
 
   @include laptop {
-    max-width: 620px;
+    max-width: 780px;
+    width: min(100%, 780px);
   }
 
   @include tablet {
-    max-width: 480px;
+    max-width: 620px;
+    width: min(100%, 620px);
   }
 
   @include mobile {
-    max-width: 320px;
+    max-width: 100%;
+    width: min(100%, 340px);
   }
 }

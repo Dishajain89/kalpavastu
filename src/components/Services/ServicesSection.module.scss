@@ -18,6 +18,10 @@
   }
 }
 
+/* ==============================
+   CONTAINER
+================================ */
+
 .container {
   max-width: $container-width;
   margin: auto;
@@ -36,9 +40,13 @@
   }
 }
 
+/* ==============================
+   SERVICE ROW
+================================ */
+
 .serviceRow {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   align-items: center;
   gap: 80px;
   margin-bottom: 140px;
@@ -49,6 +57,7 @@
 
   @include laptop {
     gap: 60px;
+    margin-bottom: 120px;
   }
 
   @include tablet {
@@ -63,7 +72,10 @@
   }
 }
 
-/* Desktop Alternate Layout */
+/* ==============================
+   DESKTOP ALTERNATE LAYOUT
+================================ */
+
 .reverse {
   .content {
     order: 2;
@@ -74,18 +86,13 @@
   }
 }
 
-/* Mobile & Tablet Same Layout */
+/* ==============================
+   TABLET + MOBILE
+   IMAGE FIRST
+   CONTENT SECOND
+================================ */
+
 @include tablet {
-  .reverse {
-    .content {
-      order: 2;
-    }
-
-    .imageWrapper {
-      order: 1;
-    }
-  }
-
   .serviceRow {
     .imageWrapper {
       order: 1;
@@ -97,6 +104,10 @@
   }
 }
 
+/* ==============================
+   CONTENT
+================================ */
+
 .content {
   max-width: 620px;
 
@@ -104,6 +115,10 @@
     max-width: 100%;
   }
 }
+
+/* ==============================
+   HEADING
+================================ */
 
 .headingWrapper {
   display: flex;
@@ -117,35 +132,144 @@
   }
 }
 
+/* ==============================
+   LEFT LINE
+================================ */
+
 .line {
   width: 4px;
   height: 70px;
   background: white;
   flex-shrink: 0;
+  display: block;
+
+  @include laptop {
+    width: 4px;
+    height: 65px;
+  }
+
+  @include tablet {
+    width: 4px;
+    height: 60px;
+  }
 
   @include mobile {
+    width: 3px;
     height: 55px;
   }
 }
 
+/*
+  FIRST SERVICE HEADING
+
+  Architecture + Vaastu Integration
+  2 lines me aa raha hai, isliye line
+  automatically poori heading ki height
+  tak stretch hogi.
+*/
+
+.serviceRow:first-child .line {
+  align-self: stretch;
+  height: auto;
+  min-height: 70px;
+
+  @include laptop {
+    min-height: 65px;
+  }
+
+  @include tablet {
+    min-height: 60px;
+  }
+
+  @include mobile {
+    min-height: 55px;
+  }
+}
+
+/* ==============================
+   HEADING TEXT
+================================ */
+
 .content h2 {
   color: $heading-color;
-  font-size: clamp(1.8rem, 4vw, 3rem);
+
+  font-size: clamp(
+    1.8rem,
+    4vw,
+    3rem
+  );
+
   font-weight: 300;
+
   line-height: 1.15;
+
   text-transform: uppercase;
+
   letter-spacing: 1px;
+
+  margin: 0;
+
+  max-width: 100%;
+
+  word-break: normal;
+  overflow-wrap: break-word;
+
+  @include laptop {
+    font-size: clamp(
+      1.7rem,
+      3.5vw,
+      2.7rem
+    );
+  }
+
+  @include tablet {
+    font-size: clamp(
+      1.8rem,
+      5vw,
+      2.6rem
+    );
+  }
+
+  @include mobile {
+    font-size: clamp(
+      1.55rem,
+      7vw,
+      2.2rem
+    );
+
+    line-height: 1.15;
+    letter-spacing: 0.7px;
+  }
+
+  @include mobile {
+    font-size: clamp(
+      1.45rem,
+      7vw,
+      2rem
+    );
+  }
 }
+
+/* ==============================
+   DESCRIPTION
+================================ */
 
 .content p {
   color: $primary-text;
+
   line-height: 2;
+
   font-size: 1rem;
+
   text-align: justify;
+
   white-space: pre-line;
+
+  margin: 0;
 
   @include laptop {
     font-size: 0.98rem;
+    line-height: 1.95;
   }
 
   @include tablet {
@@ -156,17 +280,32 @@
   @include mobile {
     font-size: 0.92rem;
     line-height: 1.8;
+    text-align: left;
   }
 }
 
+/* ==============================
+   IMAGE
+================================ */
+
 .imageWrapper {
   position: relative;
+
   width: 100%;
+
   display: flex;
+
   justify-content: center;
   align-items: center;
 
+  /*
+    Image ka original proportion preserve
+    karne ke liye aspect ratio.
+  */
+
   aspect-ratio: 4 / 5;
+
+  overflow: hidden;
 
   @include laptop {
     aspect-ratio: 4 / 4.8;
@@ -174,22 +313,106 @@
 
   @include tablet {
     aspect-ratio: 4 / 3.8;
+
     max-width: 650px;
+
+    width: 100%;
+
     margin: 0 auto;
   }
 
   @include mobile {
     aspect-ratio: 1 / 1;
+
     max-width: 100%;
+
+    width: 100%;
   }
 
   img {
     object-fit: contain;
+
     object-position: center;
+
     transition: transform 0.7s ease;
   }
 
   &:hover img {
     transform: scale(1.03);
+  }
+}
+
+/* ==============================
+   SMALL MOBILE
+   390px / 375px / 360px
+================================ */
+
+@media (max-width: 390px) {
+  .services {
+    padding: 50px 0;
+  }
+
+  .container {
+    padding: 0 15px;
+  }
+
+  .serviceRow {
+    gap: 22px;
+    margin-bottom: 60px;
+  }
+
+  .headingWrapper {
+    gap: 11px;
+    margin-bottom: 18px;
+  }
+
+  .line {
+    width: 3px;
+  }
+
+  .serviceRow:first-child .line {
+    min-height: 50px;
+  }
+
+  .content h2 {
+    font-size: 1.4rem;
+    line-height: 1.15;
+    letter-spacing: 0.5px;
+  }
+
+  .content p {
+    font-size: 0.88rem;
+    line-height: 1.75;
+  }
+
+  .imageWrapper {
+    aspect-ratio: 1 / 1;
+  }
+}
+
+/* ==============================
+   VERY SMALL MOBILE
+   320px - 350px
+================================ */
+
+@media (max-width: 350px) {
+  .container {
+    padding: 0 12px;
+  }
+
+  .content h2 {
+    font-size: 1.3rem;
+  }
+
+  .content p {
+    font-size: 0.85rem;
+  }
+
+  .headingWrapper {
+    gap: 9px;
+  }
+
+  .line {
+    width: 3px;
   }
 }
