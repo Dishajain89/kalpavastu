@@ -13,8 +13,8 @@ const PortfolioSection = () => {
   return (
     <section className={styles.portfolio}>
       <div className={styles.container}>
-        <div className={styles.heading}>
-          
+        {/* <div className={styles.heading}>
+
           <h2>Featured Projects</h2>
 
           <p>
@@ -22,7 +22,7 @@ const PortfolioSection = () => {
             Architecture, Structure, Interior Design
             and Vaastu.
           </p>
-        </div>
+        </div> */}
 
         <div className={styles.grid}>
           {projects.map((project, index) => (
