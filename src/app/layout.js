@@ -1,5 +1,5 @@
 "use client";
-import { Manrope, Cormorant_Garamond } from "next/font/google";
+import { Manrope, Cormorant_Garamond,Montserrat } from "next/font/google";
 
 import { usePathname } from "next/navigation";
 
@@ -20,6 +20,13 @@ const cormorant = Cormorant_Garamond({
   variable: "--font-accent",
 });
 
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-montserrat",
+  display: "swap",
+});
+
 export default function RootLayout({ children }) {
   const pathname = usePathname();
 
@@ -28,7 +35,7 @@ export default function RootLayout({ children }) {
   const showFooter = !hideFooterRoutes.includes(pathname);
   return (
     <html lang="en">
-      <body className={`${manrope.variable} ${cormorant.variable}`}>
+      <body className={`${manrope.variable} ${cormorant.variable} ${montserrat.variable}`}>
         <Navbar />
         {children}
         <ScrollToTop/>

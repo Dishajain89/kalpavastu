@@ -1,0 +1,279 @@
+.templateWrapper {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #171615;
+  color: #f0ede8; // Crisp off-white default
+  box-sizing: border-box;
+
+  // Safe navbar clearance across screen sizes
+  padding-top: calc(var(--navbar-height, 80px) + 2rem);
+  padding-bottom: clamp(3rem, 6vw, 6rem);
+  padding-left: clamp(1rem, 4vw, 4.5rem);
+  padding-right: clamp(1rem, 4vw, 4.5rem);
+
+  @media (max-width: 480px) {
+    padding-top: calc(var(--navbar-height, 70px) + 1.25rem);
+  }
+}
+
+.layout {
+  width: 100%;
+  max-width: 1380px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(2.2rem, 4.5vw, 4.25rem);
+}
+
+.image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+// -------------------------------------------------------------
+// Shared Typography Styles
+// -------------------------------------------------------------
+.sectionTitle {
+  font-family: var(--font-montserrat), sans-serif;
+  font-size: clamp(2.25rem, 1.8vw, 1.65rem);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgb(192, 176, 158);
+  line-height: 1.25;
+  margin: 0 0 1rem 0;
+}
+
+.bodyText {
+  font-family: var(--font-montserrat), sans-serif;
+  font-size: clamp(0.85rem, 0.95vw, 0.94rem);
+  font-weight: 350;
+  line-height: 1.8;
+  color: #ece8e1; // Bright white-cream tone
+  margin: 0;
+  text-align: left;
+}
+
+// -------------------------------------------------------------
+// ROW 1: Hero & Intro
+// -------------------------------------------------------------
+.rowOne {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(1.5rem, 3vw, 2.75rem);
+  align-items: stretch;
+
+  @media (min-width: 860px) {
+    grid-template-columns: 48% 52%;
+  }
+}
+
+.tallImageWrap {
+  position: relative;
+  width: 100%;
+  min-height: 340px;
+  aspect-ratio: 4 / 5;
+
+  @media (min-width: 860px) {
+    height: 100%;
+    min-height: 520px;
+    aspect-ratio: auto;
+  }
+}
+
+.introCol {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.75rem;
+}
+
+.headerContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;     // Heading center align
+  text-align: center;      // Text center align
+
+  .title {
+    font-family: var(--font-montserrat), sans-serif;
+    font-size: clamp(2.35rem, 2.3vw, 2.05rem);
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgb(192, 176, 158);
+    line-height: 1.25;
+    margin: 0 0 0.35rem 0;
+  }
+
+  .subtitle {
+    font-family: var(--font-cormorant), Georgia, serif;
+    font-size: clamp(2rem, 1.7vw, 1.5rem);
+    font-weight: 700;
+    color: rgb(192, 176, 158);
+    margin: 0 0 1.25rem 0;
+    letter-spacing: 0.03em;
+  }
+
+  .paragraphs {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    width: 100%;
+
+    p {
+      @extend .bodyText;
+      text-align: left;
+      line-height: 1.75;
+    }
+  }
+
+  // Standout bold quote line
+  .highlightQuote {
+    font-family: var(--font-montserrat), sans-serif;
+    // font-size: clamp(0.95rem, 1.1vw, 2.1rem);
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.6;
+    letter-spacing: 0.02em;
+    color: rgb(192, 176, 158); // Bright prominent white
+    margin: 1.25rem 0 0 0;
+    text-align: left;
+  }
+}
+
+.rowOneImageWrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  min-height: 200px;
+}
+
+// -------------------------------------------------------------
+// ROW 2: Philosophy
+// -------------------------------------------------------------
+.rowTwo {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(1.5rem, 3vw, 2.75rem);
+  align-items: center;
+
+  @media (min-width: 860px) {
+    grid-template-columns: 48% 52%;
+  }
+}
+
+.philosophyCol {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .sectionTitle {
+    text-align: left;
+  }
+
+  .bodyText {
+    text-align: left;
+    color: #ece8e1;
+  }
+}
+
+.philosophyImageWrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  min-height: 200px;
+}
+
+// -------------------------------------------------------------
+// ROW 3: Three Image Strip
+// -------------------------------------------------------------
+.rowThree {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(1rem, 2vw, 1.5rem);
+
+  @media (min-width: 520px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.stripImageWrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+}
+
+// -------------------------------------------------------------
+// ROW 4: Details
+// -------------------------------------------------------------
+.rowFour {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(1.5rem, 3.5vw, 3rem);
+  align-items: center;
+
+  @media (min-width: 860px) {
+    grid-template-columns: 55% 45%;
+  }
+}
+
+.detailsImageWrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  min-height: 240px;
+
+  @media (min-width: 860px) {
+    min-height: 380px;
+  }
+}
+
+.detailsCol {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @media (min-width: 860px) {
+    padding-left: clamp(1rem, 2.5vw, 2.5rem);
+  }
+
+  .detailsHeading {
+    @extend .sectionTitle;
+    margin-bottom: 1.25rem;
+    text-align: left;
+  }
+}
+
+.bulletList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+
+  li {
+    position: relative;
+    padding-left: 1.3rem;
+    font-family: var(--font-montserrat), sans-serif;
+    font-size: clamp(0.85rem, 0.95vw, 0.94rem);
+    font-weight: 400;
+    line-height: 1.65;
+    color: #e8e4dc; // Crisp bright list item
+
+    &::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      top: -0.05rem;
+      color: #f7f3ed;
+      font-size: 1.1rem;
+    }
+  }
+
+  &.highlightsList {
+    margin-top: 1.25rem;
+  }
+}

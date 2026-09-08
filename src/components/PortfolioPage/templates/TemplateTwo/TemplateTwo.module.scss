@@ -1,0 +1,329 @@
+.templateWrapper {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #171615;
+  color: #ece8e1;
+  box-sizing: border-box;
+
+  padding-top: calc(var(--navbar-height, 80px) + 2rem);
+  padding-bottom: clamp(3rem, 6vw, 6rem);
+  padding-left: clamp(1rem, 4.5vw, 4.5rem);
+  padding-right: clamp(1rem, 4.5vw, 4.5rem);
+
+  @media (max-width: 480px) {
+    padding-top: calc(var(--navbar-height, 70px) + 1rem);
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(2.5rem, 5vw, 5rem);
+}
+
+.coverImg {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+// -------------------------------------------------------------
+// 1. HERO BANNER
+// -------------------------------------------------------------
+.heroSection {
+  width: 100%;
+}
+
+.heroImageWrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  min-height: 380px;
+  overflow: hidden;
+
+  @media (max-width: 768px) {
+    aspect-ratio: 4 / 3;
+  }
+}
+
+.heroOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: clamp(1.5rem, 3.5vw, 3rem);
+  background: linear-gradient(180deg, rgba(23, 22, 21, 0) 0%, rgba(23, 22, 21, 0.88) 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  z-index: 2;
+
+  .heroBrand {
+    font-family: var(--font-montserrat), sans-serif;
+    font-size: clamp(0.75rem, 1vw, 0.9rem);
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #ded6cb;
+    font-weight: 600;
+  }
+
+  .heroTitle {
+    font-family: var(--font-montserrat), sans-serif;
+    font-size: clamp(1.4rem, 2.5vw, 2.2rem);
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #f7f3ed;
+    margin: 0;
+    line-height: 1.2;
+  }
+
+  .heroDesc {
+    font-family: var(--font-montserrat), sans-serif;
+    font-size: clamp(0.82rem, 0.95vw, 0.92rem);
+    line-height: 1.65;
+    color: #c4bfa6;
+    max-width: 680px;
+    margin: 0.4rem 0 0 0;
+    font-weight: 350;
+  }
+}
+
+// -------------------------------------------------------------
+// 2. STATEMENT / QUOTE SECTION
+// -------------------------------------------------------------
+.statementSection {
+  width: 100%;
+  max-width: 820px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 1rem 0;
+
+  .statementTitle {
+    font-family: var(--font-montserrat), sans-serif;
+    font-size: clamp(1.1rem, 1.8vw, 1.55rem);
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #f7f3ed;
+    line-height: 1.35;
+    margin: 0;
+  }
+
+  .statementSubtitle {
+    font-family: var(--font-cormorant), Georgia, serif;
+    font-size: clamp(1.05rem, 1.5vw, 1.35rem);
+    font-style: italic;
+    color: #ded6cb;
+    letter-spacing: 0.04em;
+  }
+
+  .statementText {
+    font-family: var(--font-montserrat), sans-serif;
+    font-size: clamp(0.82rem, 0.95vw, 0.92rem);
+    line-height: 1.7;
+    color: #a8a39c;
+    margin: 0.5rem 0 0 0;
+    font-weight: 350;
+  }
+}
+
+// -------------------------------------------------------------
+// 3. THUMBNAILS STRIP
+// -------------------------------------------------------------
+.stripSection {
+  width: 100%;
+}
+
+.stripGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+
+  @media (min-width: 540px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (min-width: 860px) {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 16px;
+  }
+}
+
+.stripItem {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+}
+
+// -------------------------------------------------------------
+// 4. EDITORIAL SPLIT
+// -------------------------------------------------------------
+.editorialSection {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(1.75rem, 4vw, 3.5rem);
+  align-items: center;
+
+  @media (min-width: 860px) {
+    grid-template-columns: 45% 55%;
+  }
+}
+
+.editorialTextCol {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .sectionHeading {
+    font-family: var(--font-montserrat), sans-serif;
+    font-size: clamp(1.3rem, 2.2vw, 1.85rem);
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #f7f3ed;
+    margin: 0 0 1rem 0;
+    line-height: 1.25;
+  }
+
+  .bodyPara {
+    font-family: var(--font-montserrat), sans-serif;
+    font-size: clamp(0.84rem, 0.95vw, 0.92rem);
+    line-height: 1.8;
+    color: #ece8e1;
+    margin: 0 0 1rem 0;
+    font-weight: 350;
+  }
+
+  .specsBox {
+    margin-top: 1.25rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+    .specsHeading {
+      font-family: var(--font-montserrat), sans-serif;
+      font-size: 1rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #f7f3ed;
+      margin: 0 0 0.75rem 0;
+    }
+  }
+
+  .bulletList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    li {
+      position: relative;
+      padding-left: 1.25rem;
+      font-family: var(--font-montserrat), sans-serif;
+      font-size: clamp(0.8rem, 0.9vw, 0.88rem);
+      color: #b8b3ab;
+      line-height: 1.6;
+
+      &::before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        top: -0.05rem;
+        color: #ddd7ce;
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+.editorialImageCol {
+  width: 100%;
+}
+
+.tallImageWrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  min-height: 380px;
+
+  @media (min-width: 860px) {
+    min-height: 520px;
+  }
+}
+
+// -------------------------------------------------------------
+// 5. FULL-WIDTH PANORAMIC SHOWCASE
+// -------------------------------------------------------------
+.panoramicSection {
+  width: 100%;
+}
+
+.panoramicWrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  min-height: 280px;
+
+  @media (min-width: 860px) {
+    aspect-ratio: 21 / 9;
+  }
+}
+
+// -------------------------------------------------------------
+// 6. TWO-COLUMN SPLIT SHOWCASE
+// -------------------------------------------------------------
+.splitGridSection {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.splitCard {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.splitImageWrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  min-height: 240px;
+}
+
+.splitCardCaption {
+  h4 {
+    font-family: var(--font-montserrat), sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #f7f3ed;
+    margin: 0 0 0.35rem 0;
+  }
+
+  p {
+    font-family: var(--font-montserrat), sans-serif;
+    font-size: 0.82rem;
+    line-height: 1.6;
+    color: #a8a39c;
+    margin: 0;
+    font-weight: 350;
+  }
+}
