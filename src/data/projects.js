@@ -8,7 +8,7 @@ const projects = [
   {
     id: "modern-bungalow",
     slug: "pushpendra-jamnani",
-    title: "Pushpendra Jamnani",
+    title: "Ashray",
     image: "/images/projects/pushpendra.png",
   },
   {

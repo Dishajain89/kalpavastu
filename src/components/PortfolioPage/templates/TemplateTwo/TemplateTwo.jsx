@@ -150,7 +150,8 @@ export default function TemplateTwo({ project = {} }) {
 
             {splitRight && (
               <div className={styles.splitCard}>
-                <div className={styles.splitImageWrap}>
+                {/*
+                   <div className={styles.splitImageWrap}>
                   <Image
                     src={splitRight}
                     alt="Space Detail Right"
@@ -159,10 +160,14 @@ export default function TemplateTwo({ project = {} }) {
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </div>
+                  */}
+               
+               {/*
                 <div className={styles.splitCardCaption}>
                   <h4>{testimonial?.client || "CLIENT TESTIMONY"}</h4>
                   <p>{testimonial?.text || "Spaces crafted for silence, comfort and memory."}</p>
                 </div>
+                */} 
               </div>
             )}
           </section>

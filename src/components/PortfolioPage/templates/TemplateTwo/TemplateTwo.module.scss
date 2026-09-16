@@ -1,6 +1,7 @@
 .templateWrapper {
   width: 100%;
   min-height: 100vh;
+  overflow-x: hidden;
   background-color: #171615;
   color: #ece8e1;
   box-sizing: border-box;
@@ -17,8 +18,9 @@
 
 .container {
   width: 100%;
-  max-width: 1400px;
+  max-width: 1920px;
   margin: 0 auto;
+  min-width: 0;
   display: flex;
   flex-direction: column;
   gap: clamp(2.5rem, 5vw, 5rem);
@@ -42,7 +44,7 @@
   position: relative;
   width: 100%;
   aspect-ratio: 16 / 9;
-  min-height: 380px;
+  min-height: clamp(220px, 30vw, 720px);
   overflow: hidden;
 
   @media (max-width: 768px) {
@@ -63,12 +65,14 @@
   z-index: 2;
 
   .heroBrand {
-    font-family: var(--font-montserrat), sans-serif;
-    font-size: clamp(0.75rem, 1vw, 0.9rem);
-    letter-spacing: 0.22em;
+  font-family: var(--font-montserrat), sans-serif;
+    font-size: clamp(1.4rem, 2.5vw, 2.2rem);
+    font-weight: 700;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: #ded6cb;
-    font-weight: 600;
+    color: #f7f3ed;
+    margin: 0;
+    line-height: 1.2;
   }
 
   .heroTitle {
@@ -80,6 +84,7 @@
     color: #f7f3ed;
     margin: 0;
     line-height: 1.2;
+    overflow-wrap: anywhere;
   }
 
   .heroDesc {
@@ -98,7 +103,7 @@
 // -------------------------------------------------------------
 .statementSection {
   width: 100%;
-  max-width: 820px;
+  max-width: min(100%, 920px);
   margin: 0 auto;
   text-align: center;
   display: flex;
@@ -256,10 +261,10 @@
   position: relative;
   width: 100%;
   aspect-ratio: 4 / 5;
-  min-height: 380px;
+  min-height: clamp(260px, 34vw, 680px);
 
   @media (min-width: 860px) {
-    min-height: 520px;
+    min-height: clamp(420px, 34vw, 680px);
   }
 }
 
@@ -274,7 +279,7 @@
   position: relative;
   width: 100%;
   aspect-ratio: 16 / 9;
-  min-height: 280px;
+  min-height: clamp(200px, 24vw, 560px);
 
   @media (min-width: 860px) {
     aspect-ratio: 21 / 9;
@@ -304,7 +309,7 @@
   position: relative;
   width: 100%;
   aspect-ratio: 16 / 10;
-  min-height: 240px;
+  min-height: clamp(180px, 20vw, 440px);
 }
 
 .splitCardCaption {
@@ -325,5 +330,38 @@
     color: #a8a39c;
     margin: 0;
     font-weight: 350;
+  }
+}
+
+@media (min-width: 1600px) {
+  .templateWrapper {
+    padding-left: clamp(4rem, 5vw, 7rem);
+    padding-right: clamp(4rem, 5vw, 7rem);
+  }
+
+  .container {
+    gap: clamp(5rem, 5vw, 7rem);
+  }
+}
+
+@media (max-width: 540px) {
+  .templateWrapper {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .heroOverlay {
+    padding: 1.25rem;
+  }
+
+  .heroBrand,
+  .heroTitle,
+  .sectionHeading,
+  .statementTitle {
+    overflow-wrap: anywhere;
+  }
+
+  .statementTitle {
+    letter-spacing: 0.1em;
   }
 }

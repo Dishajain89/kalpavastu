@@ -68,7 +68,7 @@ export default function ServicesSection() {
             className={`${styles.serviceRow} ${
               index % 2 !== 0 ? styles.reverse : ""
             }`}
-            initial={{ opacity: 0, y: 80 }}
+            initial={{ opacity: 1, y: 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -84,7 +84,12 @@ export default function ServicesSection() {
             </div>
 
             <div className={styles.imageWrapper}>
-              <Image src={service.image} alt={service.title} fill />
+              <Image
+                src={service.image}
+                alt={service.title}
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1600px) 45vw, 800px"
+              />
             </div>
           </motion.div>
         ))}

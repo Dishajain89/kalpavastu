@@ -12,8 +12,9 @@ h1,
 h2,
 h3,
 h4,
-.logo-text {
-  font-family: $font-accent;
+h5,
+h6 .logo-text {
+  font-family: $font-oswald;
   color: $heading-color;
   font-weight: 600;
 }
@@ -21,4 +22,6 @@ h4,
 p {
   line-height: 1.8;
   color: $secondary-text;
+  font-family: $font-accent;
+  font-weight: 400;
 }

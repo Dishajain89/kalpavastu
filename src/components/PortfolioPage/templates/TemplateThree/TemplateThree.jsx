@@ -63,7 +63,11 @@ export default function TemplateThree({ project = {} }) {
               <h2 className={styles.galleryTitle}>Spatial Perspectives</h2>
             </div>
 
-            <div className={styles.galleryLayout}>
+            <div
+              className={`${styles.galleryLayout} ${
+                !galleryTall ? styles.galleryLayoutSingle : ""
+              }`}
+            >
               {/* Left Tall Focal Column */}
               {galleryTall && (
                 <div className={styles.tallCol}>

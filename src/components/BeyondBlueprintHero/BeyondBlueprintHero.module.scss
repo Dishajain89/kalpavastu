@@ -4,58 +4,50 @@
 .hero {
   position: relative;
   width: 100%;
-  height: 100vh;
+  // 100dvh mobile address bar collapse hone par bhi stretch nahi hone deta
+  height: 100dvh;
+  min-height: 600px;
   overflow: hidden;
-
-  @include tablet {
-    height: 90vh;
-  }
-
-  @include mobile {
-    height: 80vh;
-  }
+  background-color: #17181a; // Seamless dark fallback
 }
 
 .heroImage {
-  object-fit: cover;
-  object-position: top center;
   user-select: none;
   pointer-events: none;
-
-  @include mobile {
-    object-fit: contain; 
-    object-position: top center;
-}
 }
 
-
-/* Desktop Image */
+/* Desktop Image Setup */
 .desktopImage {
   display: block;
+  object-fit: cover;
+  // Center-right focusing keeps the paper torn edge and text balanced
+  object-position: center center;
 
   @include mobile {
     display: none;
   }
 }
 
-
-/* Mobile Image */
+/* Mobile Image Setup */
 .mobileImage {
   display: none;
 
   @include mobile {
     display: block;
+    object-fit: cover;
+    // Mobile image ko top-center anchor karein taaki text bilkul crisp aur upar rahe
+    object-position: top center;
   }
 }
 
-
-/* Tablet */
+/* Tablet adjustments */
 @include tablet {
-  .heroImage {
-    object-fit: contain;
-    object-position:center;
+  .hero {
+    height: 100dvh;
+  }
+
+  .desktopImage {
+    object-fit: cover;
+    object-position: center;
   }
 }
-
-
-/* Mobile */
