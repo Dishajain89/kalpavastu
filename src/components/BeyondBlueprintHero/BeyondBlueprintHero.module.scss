@@ -4,11 +4,27 @@
 .hero {
   position: relative;
   width: 100%;
-  // 100dvh mobile address bar collapse hone par bhi stretch nahi hone deta
-  height: 100dvh;
-  min-height: 600px;
+  // Image ka exact background tone taaki koi seam na dikhe
+  background-color: #171819;
   overflow: hidden;
-  background-color: #17181a; // Seamless dark fallback
+
+  // NAVBAR CLEARANCE (Har screen size ke liye):
+  // Hero container ko navbar ki height jitna top padding milega
+  padding-top: var(--navbar-height, 80px);
+
+  // Height viewport me se navbar ko minus karke calculate hogi
+  height: 100vh;
+  height: 100dvh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: 768px) {
+    padding-top: var(--navbar-height, 70px);
+    height: auto;
+    min-height: 100dvh;
+  }
 }
 
 .heroImage {
@@ -16,38 +32,44 @@
   pointer-events: none;
 }
 
-/* Desktop Image Setup */
-.desktopImage {
-  display: block;
-  object-fit: cover;
-  // Center-right focusing keeps the paper torn edge and text balanced
-  object-position: center center;
+/* -------------------------------------------------------------
+   DESKTOP & LAPTOP (Above 1024px)
+   Cover with top-left anchor: Heading top se kabhi nahi kategi
+-------------------------------------------------------------- */
+.desktopWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
 
-  @include mobile {
+  @media (max-width: 1024px) {
     display: none;
   }
 }
 
-/* Mobile Image Setup */
-.mobileImage {
+.desktopImage {
+  object-fit: cover;
+  // TOP-LEFT anchor sabse important hai: yeh heading ko navbar ke neeche lock rakhta hai
+  object-position: left top;
+}
+
+/* -------------------------------------------------------------
+   TABLET & MOBILE (1024px and below)
+-------------------------------------------------------------- */
+.mobileWrapper {
   display: none;
 
-  @include mobile {
+  @media (max-width: 1024px) {
     display: block;
-    object-fit: cover;
-    // Mobile image ko top-center anchor karein taaki text bilkul crisp aur upar rahe
-    object-position: top center;
+    position: relative;
+    width: 100%;
+    // Portrait image ratio
+    aspect-ratio: 2 / 3;
+    max-height: calc(100dvh - var(--navbar-height, 75px));
+    margin: 0 auto;
   }
 }
 
-/* Tablet adjustments */
-@include tablet {
-  .hero {
-    height: 100dvh;
-  }
-
-  .desktopImage {
-    object-fit: cover;
-    object-position: center;
-  }
+.mobileImage {
+  object-fit: contain;
+  object-position: top center;
 }

@@ -88,7 +88,7 @@
 
   p {
     color: $tertiary-text;
-    font-size: clamp(14px, 2.5vw, 18px);
+    font-size: clamp(1rem, 1.25vw, 1.35rem);
     line-height: 1.8;
     font-weight: 700;
 
@@ -149,14 +149,14 @@
 
   h3 {
     color: $primary-text;
-    font-size: clamp(16px, 2vw, 20px);
+    font-size: clamp(1rem, 1.4vw, 1.5rem);
     letter-spacing: 1px;
   }
 
   p {
     margin-top: clamp(8px, 1.5vw, 10px);
     color: $primary-text;
-    font-size: clamp(12px, 1.8vw, 14px);
+    font-size: clamp(0.875rem, 1.05vw, 1.1rem);
   }
 
   @include mobile {
@@ -174,7 +174,7 @@
 
     span {
       color: $primary-text;
-      font-size: clamp(14px, 2vw, 16px);
+      font-size: clamp(0.9rem, 1.15vw, 1.25rem);
       letter-spacing: 1px;
       white-space: nowrap;
     }
