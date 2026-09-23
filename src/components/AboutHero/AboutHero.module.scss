@@ -217,38 +217,48 @@
 }
 
 .signatureBox {
-  // Image ki exact width (400px) ke sath sync kiya taaki left mein na bhage
   width: 400px;
   max-width: 100%;
-  margin: 0 auto;
+  margin: 15px auto 0;
   
   display: flex;
   align-items: center;
-  justify-content: center; // Signature image hamesha photo ke theek center mein rahegi
+  justify-content: center;
   text-align: center;
   padding: 10px 0;
 
-  img {
+  img,
+  .signatureImage {
     object-fit: contain;
-    height: 70px;
-    width: auto;
-    max-width: 240px;
-    margin: 0 auto; // Center alignment
+    // Badi screens aur desktop par clear readable size
+    height: 110px !important;
+    width: auto !important;
+    max-width: 340px !important;
+    margin: 0 auto;
     display: block;
+    filter: brightness(1.1); // Text contrast enhance karega
   }
 
   @include tablet {
     width: 100%;
     max-width: 320px;
+
+    img,
+    .signatureImage {
+      height: 90px !important;
+      max-width: 280px !important;
+    }
   }
 
   @include mobile {
     width: 280px;
     max-width: 85vw;
+    margin-top: 10px;
 
-    img {
-      height: 55px;
-      max-width: 200px;
+    img,
+    .signatureImage {
+      height: 80px !important;
+      max-width: 250px !important;
     }
   }
 }
